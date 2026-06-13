@@ -1,0 +1,35 @@
+import java.util.*;
+public class ResultGenerator {
+    public static void main(String[] args){
+        Scanner s=new Scanner(System.in);
+        int sum=0;
+        for(int i=1;i<=5;i++){
+            System.out.println("enter the marks of Subjects"+i+":");
+            int marks=s.nextInt();
+            sum+=marks;
+        }
+        //calculate average of marks
+        double average=sum/5;
+        System.out.println("Average of marks :"+average);
+        int gradedefiner=(int)average/10;
+        switch(gradedefiner){
+            case 10:
+            case 9:
+                System.out.println("Grade A");
+                break;
+            case 8:
+                System.out.println("Grade B");
+                break;
+            case 7:
+                System.out.println("Grade C");
+                break;
+            case 6:
+                System.out.println("Grade D");
+                break;
+            default:
+                System.out.println("Fail F");
+        }
+        
+    }
+    
+}
