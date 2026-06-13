@@ -1,0 +1,34 @@
+import java.util.*;
+public class Metrofare{
+    public static void main(String[] args){
+        double balance=690.00;
+         Scanner s=new Scanner(System.in);
+        while(balance>0){
+            System.out.println("---------------------------------------------------");
+            System.out.println("enter the distance in km press -1 to exit");
+            double distance=s.nextDouble();
+            System.out.println("enter the no. of passenger");
+            int passenger=s.nextInt();
+            if(distance==-1){
+                break;
+            }
+            System.out.println("your balnce"+balance);
+            double fare=(distance<=5)?10:(distance<=10)?20:(distance<=20)?30:50;
+            //balance calculations
+            if(balance>fare){
+                fare*=passenger;
+                balance-=fare;
+                System.out.println("Available balance"+balance);
+            }
+            else{
+                System.out.println("Insufficient Balance");
+            }
+            System.out.println("you are using dehli metro");
+            System.out.println("---------------------------------------------------");
+
+
+        }
+        System.out.println("<..> ! card time exceed<..>");
+        
+    }
+}
