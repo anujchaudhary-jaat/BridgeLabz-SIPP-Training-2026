@@ -1,0 +1,17 @@
+class addDigits  {
+    public int adddigits(int num) {
+        if (num < 10) {
+            return num;
+        }
+
+        return adddigits(sumDigits(num));
+    }
+
+    private int sumDigits(int num) {
+        if (num == 0) {
+            return 0;
+        }
+
+        return num % 10 + sumDigits(num / 10);
+    }
+}
